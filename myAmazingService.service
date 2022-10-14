@@ -1,0 +1,18 @@
+[Unit]
+Description=My Amazinng Service
+ConditionFileIsExecutable=/sbin/amazingsvc
+
+[Service]
+MemoryAccounting=true
+MemoryHigh=24M
+MemoryMax=1G
+ExecStart=/sbin/amazingsvc
+User=yogesht
+Group=yogesht
+KillMode=process
+Restart=always
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
+
